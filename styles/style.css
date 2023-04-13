@@ -27,19 +27,28 @@ body {
     font-weight: 600;
     padding: 16px 15px;
     align-items: center;
-    border-bottom: 1px solid #202020;
+    border-bottom: 1px solid #bfbfbf;
     color: #fff;
 }
 
 header i{
     cursor: pointer;
-    font-size: 30px;
+    font-size: 0px;
     margin-right: 8px;
 }
 
+.main.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
 .main .input-field {
-    display: none;
+    /* display: none; */
     margin: 20px 25px 30px;
+}
+
+.main.active .input-field {
+    display: none;
 }
 
 .input-field .txt {
@@ -92,7 +101,7 @@ header i{
     height: 1px;
     width: 100%;
     margin: 25px 0;
-    background-color:#202020;
+    background-color:#bfbfbf;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,7 +121,105 @@ header i{
     background-color:#191945;
 }
 
+.main .weather-section {
+    margin: 30px 0 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.main.active .weather-section {
+    display: flex;
+}
+
+.weather-section img{
+    max-width: 125px;
+}
+
+.weather-section .temperature {
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.weather-section .temperature .number {
+    font-weight: 600;
+}
+
+.weather-section .temperature .degrees {
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+
+.weather-section .weather {
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.weather-section .location {
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.location i {
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-section .bottom-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+    justify-content: space-between;
+}
+
+.bottom-section .column {
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i {
+    font-size: 40px;
+}
+
+.column.humidity {
+    border-left: 1px solid #bfbfbf;
+}
+
+.details .temperature, .humidity span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.details .temperature .degrees {
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+
+}
+.details p {
+    font-size: 18px;
+    margin-top: 3px;
+    color: #fff;
+}
+
+span {
+    color: #fff;
+}
 
 
 
