@@ -43,7 +43,6 @@ header i{
 }
 
 .main .input-field {
-    /* display: none; */
     margin: 20px 25px 30px;
 }
 
@@ -85,7 +84,8 @@ header i{
 
 .input-field input {
     text-align: center;
-    background-color: #191945;
+    background-color: #060635;
+    border: 1px solid #fff;
     color: white;
 }
 
@@ -118,7 +118,8 @@ header i{
 .input-field button {
     color: white;
     cursor: pointer;
-    background-color:#191945;
+    background-color: #060635;
+    border: 1px solid #fff;
 }
 
 .main .weather-section {
