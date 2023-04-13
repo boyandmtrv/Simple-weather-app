@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Open+Sans&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: 	#000031
+}
+
+.main {
+    width: 400px;
+    border-radius: 8px;
+    background-color:#000031;
+}
+
+.main header {
+    display: flex;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 16px 15px;
+    align-items: center;
+    border-bottom: 1px solid #202020;
+    color: #fff;
+}
+
+header i{
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 8px;
+}
+
+.main .input-field {
+    display: none;
+    margin: 20px 25px 30px;
+}
+
+.input-field .txt {
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.txt.error {
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.txt.pending {
+    display: block;
+    color: #0c5460;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+.input-field input, button{
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.input-field input {
+    text-align: center;
+    background-color: #191945;
+    color: white;
+}
+
+.input-field input:is(:focus, :valid){
+    border: 2px solid #000031;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.input-field .separation {
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background-color:#202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separation::before {
+    content: 'or';
+    padding: 0 15px;
+    font-size: 19px;
+    background-color: #000031;
+    color: #fff;
+}
+
+.input-field button {
+    color: white;
+    cursor: pointer;
+    background-color:#191945;
+}
+    
