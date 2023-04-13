@@ -111,4 +111,26 @@ header i{
     cursor: pointer;
     background-color:#191945;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! Icons colors change */
+.ri-map-pin-2-line,
+.ri-temp-cold-line,
+.ri-contrast-drop-2-line {
+    color: #fff;
+}
+
     
