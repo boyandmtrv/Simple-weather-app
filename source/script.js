@@ -34,7 +34,6 @@ function weatherDetails(info) {
     if (info.cod == '404') {
         txt.innerText = `${inputField.value} isn't a valid city name`;
     } else {
-
         const city = info.name;
         const country = info.sys.country;
         const { description, id } = info.weather[0];
