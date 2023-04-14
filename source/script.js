@@ -6,37 +6,15 @@ const main = document.querySelector('.main'),
     inputSection = main.querySelector('.input-field'),
     txt = inputSection.querySelector('.txt'),
     inputField = inputSection.querySelector('input'),
-    locationButton = inputSection.querySelector('button'),
+    searchBtn = inputSection.querySelector('.arrow-btn'),
     icons = main.querySelector('.weather-section img'),
     arrow = main.querySelector('header i');
 
 let check;
 
-inputField.addEventListener('keyup', e => {
-    if (e.key == 'Enter' && inputField.value !== '') {
-        appChecking(inputField.value)
-    }
+searchBtn.addEventListener('click', () => {
+    appChecking(inputField.value)
 });
-
-locationButton.addEventListener('click', () => {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    } else {
-        console.log('Your browser do not support geolocation');
-    }
-});
-
-function onSuccess(position) {
-    const { latitude, longitude } = position.coords;
-    check = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${appFile}`;
-    fetchData();
-}
-
-function onError(error) {
-    txt.innerText = error.message;
-    txt.classList.add('error');
-
-}
 
 function appChecking(city) {
 
@@ -45,7 +23,7 @@ function appChecking(city) {
 }
 
 function fetchData() {
-    txt.innerText = 'Gertting weather details...';
+    txt.innerText = 'Please enter city name...';
     txt.classList.add('pending');
 
     fetch(check).then(response => response.json()).then(result => weatherDetails(result));
