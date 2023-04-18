@@ -1,6 +1,6 @@
 import {
     appFile,
-} from './app.js'
+} from '../../app.js'
 
 const main = document.querySelector('.main'),
     inputSection = main.querySelector('.input-field'),
